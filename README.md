@@ -29,7 +29,7 @@ make install
 ```ecig``` 
 ## COMMANDS
 L: Light  
-D: Take a Drag  
+D: Take a Drag (hold)  
 F: Flick ashes  
 S: Stub out  
 C: Chain smoke (auto light)  
