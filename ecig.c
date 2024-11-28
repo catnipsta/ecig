@@ -103,7 +103,7 @@ int main(void){
 	fclose(fcigs);
 	draw();
 	mash = 60*(2.7+rand()/700000000);
-	md = 7+rand()/1000000000*4;
+	md = 8+rand()/1000000000*3;
 	start = time(NULL);
 	a1 = time(NULL);
 	while(1){
@@ -126,7 +126,7 @@ int main(void){
 				ash = 60-(cig-floor(cig/60)*60);
 				mash = 60*(2.5+rand()/700000000);}
 			if(cs && !lit)lit = true;
-			if(autodrag && lit && time(NULL)-a1 > md){a1=time(NULL);md=7+rand()/1000000000*4;cig-=13;ash+=13;}
+			if(autodrag && lit && time(NULL)-a1 > md){a1=time(NULL);md=8+rand()/1000000000*3;cig-=13;ash+=13;}
 			if(autoflick && ash >= 60*2)ash=60-(cig-floor(cig/60)*60);
 			draw();
 		}
