@@ -131,6 +131,8 @@ int main(void){
 			draw();
 		}
 	}
+	free(rank);
+	free(ranks);
 	endwin();
 	return 0;
 }
