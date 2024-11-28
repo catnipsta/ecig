@@ -44,6 +44,22 @@ char *ranks[16]={
 "The Human Ashtray"};
 
 void draw(void){
+	if(tsmoked >= 1000000)rank=ranks[15];
+	else if(tsmoked >= 500000)rank=ranks[14];
+	else if(tsmoked >= 250000)rank=ranks[13];
+	else if(tsmoked >= 100000)rank=ranks[12];
+	else if(tsmoked >= 50000)rank=ranks[11];
+	else if(tsmoked >= 25000)rank=ranks[10];
+	else if(tsmoked >= 10000)rank=ranks[9];
+	else if(tsmoked >= 5000)rank=ranks[8];
+	else if(tsmoked >= 2500)rank=ranks[7];
+	else if(tsmoked >= 1000)rank=ranks[6];
+	else if(tsmoked >= 750)rank=ranks[5];
+	else if(tsmoked >= 500)rank=ranks[4];
+	else if(tsmoked >= 250)rank=ranks[3];
+	else if(tsmoked >= 100)rank=ranks[2];
+	else if(tsmoked >= 20)rank=ranks[1];
+	else rank=ranks[0];
 	clear();
 	if(stl && lit){
         	mvprintw(0,5+floor(cig/60)+ceil(ash/60)," )");
@@ -67,22 +83,6 @@ void draw(void){
 		else
 			mvprintw(4,i+5," ");
 	}
-	if(tsmoked >= 1000000)rank=ranks[15];
-	else if(tsmoked >= 500000)rank=ranks[14];
-	else if(tsmoked >= 250000)rank=ranks[13];
-	else if(tsmoked >= 100000)rank=ranks[12];
-	else if(tsmoked >= 50000)rank=ranks[11];
-	else if(tsmoked >= 25000)rank=ranks[10];
-	else if(tsmoked >= 10000)rank=ranks[9];
-	else if(tsmoked >= 5000)rank=ranks[8];
-	else if(tsmoked >= 2500)rank=ranks[7];
-	else if(tsmoked >= 1000)rank=ranks[6];
-	else if(tsmoked >= 750)rank=ranks[5];
-	else if(tsmoked >= 500)rank=ranks[4];
-	else if(tsmoked >= 250)rank=ranks[3];
-	else if(tsmoked >= 100)rank=ranks[2];
-	else if(tsmoked >= 20)rank=ranks[1];
-	else rank=ranks[0];
 	mvprintw(6,0,"Smoked %i cigs this session.",csmoked);
 	mvprintw(7,0,"Smoked %i cigs in total.",tsmoked);
 	mvprintw(8,0,"Rank: %s",rank);
