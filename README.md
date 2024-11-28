@@ -21,7 +21,7 @@ git clone https://github.com/CatPeep/ecig.git && cd ecig
 ```
 make
 ```
-3. Install (run as root)
+3. Install (run as root & must have bzip2 for manpage)
 ```
 make install
 ```
