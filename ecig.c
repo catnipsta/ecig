@@ -110,7 +110,7 @@ int main(void){
 		c=getch();
 		if(c == 'l'){cs=false;lit=true;}
 		else if(c == 'c'){cs=true;lit=true;}
-		else if(c == 's'){lit=false;ash=60-(cig-floor(cig/60)*60);}
+		else if(c == 's'){cs=false;lit=false;ash=60-(cig-floor(cig/60)*60);}
 		else if(c == 'd' && lit){cig--;ash++;autodrag=false;}
 		else if(c == 'a')autodrag = true;
 		else if(c == 'f'){ash = 60-(cig-floor(cig/60)*60);}
