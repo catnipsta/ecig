@@ -113,7 +113,7 @@ int main(void){
 		else if(c == 's'){cs=false;lit=false;ash=60-(cig-floor(cig/60)*60);}
 		else if(c == 'd' && lit){cig--;ash++;autodrag=false;}
 		else if(c == 'a')autodrag = true;
-		else if(c == 'f'){ash = 60-(cig-floor(cig/60)*60);}
+		else if(c == 'f'){autoflick=false;ash = 60-(cig-floor(cig/60)*60);}
 		else if(c == 'x')autoflick = true;
 		if(time(NULL)-start != 0){
 			start = time(NULL);
