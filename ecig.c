@@ -98,9 +98,10 @@ int main(void){
 	curs_set(0);
 	strcpy(cigloc,getenv("HOME"));
 	strcat(cigloc,"/.cigs");
-	fcigs = fopen(cigloc,"ab+");
-	fscanf(fcigs,"%d",&tsmoked);
-	fclose(fcigs);
+	fcigs = fopen(cigloc,"r");
+	if(fcigs != NULL){
+		fscanf(fcigs,"%d",&tsmoked);
+		fclose(fcigs);}
 	draw();
 	mash = 60*(2.7+rand()/700000000);
 	md = 8+rand()/1000000000*3;
@@ -121,7 +122,7 @@ int main(void){
 				cig--;
 				ash++;
 				stl = !stl;}
-			if(cig <= 0){lit=false;csmoked++;tsmoked++;cig=840;ash=0;fcigs=fopen(cigloc,"w");sprintf(ttsmoked,"%d",tsmoked);fputs(ttsmoked,fcigs);fclose(fcigs);fcigs=fopen(cigloc,"ab+");fscanf(fcigs,"%d",&tsmoked);fclose(fcigs);}
+			if(cig <= 0){lit=false;csmoked++;tsmoked++;cig=840;ash=0;fcigs=fopen(cigloc,"w");sprintf(ttsmoked,"%d",tsmoked);fputs(ttsmoked,fcigs);fclose(fcigs);fcigs=fopen(cigloc,"r");fscanf(fcigs,"%d",&tsmoked);fclose(fcigs);}
 			if(ash > mash){
 				ash = 60-(cig-floor(cig/60)*60);
 				mash = 60*(2.5+rand()/700000000);}
