@@ -35,3 +35,6 @@ S: Stub out
 C: Chain smoke (auto light)  
 A: Auto drag  
 X: Auto flick  
+
+## FULL DOCUMENTATION
+```man ecig```
