@@ -15,7 +15,7 @@ Rank: Stinker
 ## INSTALL
 1. Clone the repository and cd into the directory
 ```
-git clone https://github.com/CatPeep/ecig.git && cd ecig
+git clone https://github.com/catnipsta/ecig.git && cd ecig
 ```
 2. Compile (gcc and ncurses must be installed)
 ```
